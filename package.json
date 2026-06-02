@@ -1,0 +1,43 @@
+{
+  "name": "fake-api",
+  "version": "1.0.0",
+  "description": "Fake RESTful API for development and testing: JWT authentication, in-memory todo CRUD, query filters, sorting, pagination, RFC 7807 problem details, and a local HTTP status catalog at /status/:code.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js && node --check src/app.js",
+    "env:init": "cp -n .env.example .env 2>/dev/null || cp .env.example .env",
+    "docker:build": "docker compose build",
+    "docker:up": "docker compose up",
+    "docker:down": "docker compose down",
+    "test": "npm run check"
+  },
+  "keywords": [
+    "fake-api",
+    "mock-api",
+    "rest-api",
+    "express",
+    "jwt",
+    "todos",
+    "crud",
+    "in-memory",
+    "rfc7807",
+    "problem-details",
+    "http-status",
+    "testing",
+    "development"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "uuid": "^14.0.0"
+  }
+}
